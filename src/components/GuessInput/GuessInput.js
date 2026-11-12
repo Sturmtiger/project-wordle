@@ -1,11 +1,11 @@
 import React from "react";
 
-function GuessInput() {
+function GuessInput({ handleSubmitGuessWord }) {
   const [guessWord, setGuessWord] = React.useState("");
 
   function handleOnSubmit(event) {
     event.preventDefault();
-    console.log({ guess: guessWord });
+    handleSubmitGuessWord(guessWord);
     setGuessWord("");
   }
 
